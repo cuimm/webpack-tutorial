@@ -20,12 +20,12 @@ module.exports = {
             loader: 'style-loader', // 创建style标签，将js中的样式资源插入到style标签并添加到head标签
           },
           {
-            loader: 'css-loader', // 处理CSS文件，将CSS模块转化成webpack能识别的JS模块
+            loader: 'css-loader', // 处理css模块，将css模块转化成webpack能识别的js模块
           }
         ],
       },
       {
-        // 处理LESS模块【loader执行顺序：从后向前依次执行（也可说从右往左，从下往上）】
+        // 处理less模块【loader执行顺序：从后向前依次执行（也可说从右往左，从下往上）】
         test: /.less/,
         use: [
           'style-loader', // 创建style标签，将js中的样式资源插入到style标签并添加到head标签
