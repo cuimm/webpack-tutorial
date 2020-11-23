@@ -1,0 +1,6 @@
+.logo {
+    width: 640px;
+    height: 100px;
+    background: url('assets/logo.jpg?with=300&height=300'); /* css中引入图片资源 */
+    background-size: cover;
+}
