@@ -37,6 +37,30 @@ module.exports = {
           }
         ],
       },
+      {
+        test: /.(ttf|woff|woff2|eot|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1000, // 1kb之内换成base64
+              name: '[name].[hash:8].[ext]', // 文件名
+              outputPath: 'fonts', // 将文件拷贝到输出目录下的fonts文件夹
+              publicPath: 'fonts', // 最终引用的文件路径前缀
+            },
+          }
+        ],
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[name].[hash:8].[ext]',
+          outputPath: 'music',
+          publicPath: 'music',
+        }
+      }
     ],
   },
   plugins: [
