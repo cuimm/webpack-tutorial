@@ -1,0 +1,11 @@
+body {
+    background: #dddddd;
+    font-size: 14px;
+}
+.box {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    background: url('../assets/images/logo.jpg') no-repeat;
+    background-size: cover;
+}

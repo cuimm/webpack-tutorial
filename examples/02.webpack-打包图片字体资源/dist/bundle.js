@@ -120,7 +120,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /*! CommonJS bailout: module.exports is used directly at 1:0-14 */
 /***/ ((module) => {
 
-eval("module.exports = \"images/commend.176bd5b2.jpg.\";\n\n//# sourceURL=webpack:///./src/assets/images/commend.jpg?");
+eval("module.exports = \"images/commend.176bd5b2.jpg\";\n\n//# sourceURL=webpack:///./src/assets/images/commend.jpg?");
 
 /***/ }),
 
@@ -133,7 +133,7 @@ eval("module.exports = \"images/commend.176bd5b2.jpg.\";\n\n//# sourceURL=webpac
 /*! CommonJS bailout: module.exports is used directly at 1:0-14 */
 /***/ ((module) => {
 
-eval("module.exports = \"images/logo.7c11d88c.jpg.?with=300&height=300\";\n\n//# sourceURL=webpack:///./src/assets/images/logo.jpg?");
+eval("module.exports = \"images/logo.7c11d88c.jpg?with=300&height=300\";\n\n//# sourceURL=webpack:///./src/assets/images/logo.jpg?");
 
 /***/ }),
 

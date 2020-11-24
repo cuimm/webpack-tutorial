@@ -1,0 +1,17 @@
+$panel-bg-color: bisque;
+$panel-section-bg-color: cadetblue;
+
+.panel {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  background: $panel-bg-color;
+  .panel__section {
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+    background: url('../assets/images/commend.jpg') no-repeat;
+    background-size: cover;
+  }
+}
