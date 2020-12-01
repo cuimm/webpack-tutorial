@@ -1,0 +1,9 @@
+/**
+    panel.css
+*/
+.panel {
+    width: 200px;
+    height: 200px;
+    background: url('../assets/images/animal.jpg') no-repeat;
+    background-size: 100% 100%;
+}

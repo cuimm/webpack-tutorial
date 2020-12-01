@@ -1,0 +1,33 @@
+/**
+    index.css
+*/
+body {
+    background: #dddddd;
+}
+
+::placeholder {
+    color: blue;
+}
+
+/**
+::placeholder {
+    color: blue;
+}
+
+========================
+=> 配置postcss-loader && postcss.config.js
+=> 经过postcss编译结果为：
+========================
+
+::-moz-placeholder {
+    color: blue;
+}
+
+:-ms-input-placeholder {
+    color: blue;
+}
+
+::placeholder {
+    color: blue;
+}
+ */

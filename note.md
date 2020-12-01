@@ -20,6 +20,9 @@
 5. 分离css
 > npm install mini-css-extract-plugin -D
 
+6. 处理css前缀
+> npm i postcss-loader autoprefixer -D
+
 
 
 ### 处理图片
