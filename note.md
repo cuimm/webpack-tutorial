@@ -32,4 +32,5 @@
 > file-loader解决CSS等文件中的引入图片路径问题   
 > url-loader当图片小于limit的时候会把图片BASE64编码，大于limit参数的时候还是使用file-loader 进行拷贝   
 
+### babel配置
 
