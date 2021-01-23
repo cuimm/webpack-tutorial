@@ -10,6 +10,7 @@ console.log('bable-plugin-example');
  */
 module.exports = function ({types}) {
   return {
+    // visitor：访问者模式
     visitor: {
       /**
        * 负责处理所有节点类型为 Identifier 的AST节点

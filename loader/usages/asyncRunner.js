@@ -18,10 +18,10 @@ const loaderDir = path.resolve(__dirname, './loaders');
 const resolveLoader = loader => path.resolve(loaderDir, loader);
 
 // 要加载的资源和loader之间 以及loader和loader之间用!分割
-const request = 'inline-loader1!inline-loader2!./src/index.js';
-let inlineLoaders = request.split('!');  // ['inline-loader1', 'inline-loader2', './src/index.js']
+const request = '!!async-loader1!async-loader2!inline-loader1!inline-loader2!./src/index.js';
+let inlineLoaders = request.replace(/^-?!+/g, '').replace(/!!+/g, '!').split('!');
 const resource = inlineLoaders.pop();  // 要加载的资源 ./src/index.js
-inlineLoaders = inlineLoaders.map(resolveLoader);  // [inline-loader1绝对路径, inline-loader2绝对路径]
+inlineLoaders = inlineLoaders.map(resolveLoader);
 
 const rules = [
   {
@@ -56,10 +56,18 @@ preLoaders = preLoaders.map(resolveLoader);
 normalLoaders = normalLoaders.map(resolveLoader);
 postLoaders = postLoaders.map(resolveLoader);
 
-// 1.不管在rules数组中是如何排列的,永远是 post + inline + normal + pre
-// 2.如果类型一样的: 先下后上,先右后左
-const loaders = [...postLoaders, ...inlineLoaders, ...normalLoaders, ...preLoaders];
-console.log('===loaders===', loaders);
+let loaders = [];
+if (request.startsWith('!!')) {
+  loaders = inlineLoaders
+} else if (request.startsWith('-!')) {
+  loaders = [...postLoaders, ...inlineLoaders]
+} else if (request.startsWith('!')) {
+  loaders = [...postLoaders, ...inlineLoaders, ...preLoaders]
+} else {
+  loaders = [...postLoaders, ...inlineLoaders, ...normalLoaders, ...preLoaders]
+}
+
+console.log(loaders);
 
 runLoaders({
   resource: resource, // 加载的资源的绝对路径
